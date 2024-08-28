@@ -1,0 +1,81 @@
+/* Navbar Background Color and Styling */
+.navbar {
+  background-color: #3fd96b; /* Dark background for the navbar */
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+  color: #10020e !important; /* White color for brand text */
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0;
+  margin-top: 0;
+}
+
+/* Navbar Categories Styling */
+.navbar-nav.categories {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  padding-left: 0; /* Remove default padding */
+  margin-bottom: 0; /* Remove default margin */
+  list-style: none;
+}
+
+/* Navbar Items Styling */
+.navbar-nav .nav-item {
+  position: relative; /* Required for positioning the divider */
+  margin-left: 30px;
+}
+
+/* Navbar Links Styling */
+.navbar-nav .nav-link {
+  color: #020000 !important; /* White color for links */
+  padding: 0.5rem 1rem; /* Padding around links */
+  text-align: center; /* Center text */
+}
+
+/* Divider Styling */
+.navbar-nav .nav-item:not(:last-child)::after {
+  content: ""; /* Empty content */
+  height: 1.5rem; /* Height of the line */
+  width: 1px; /* Width of the line */
+  background-color: #3fd96b; /* Color of the line */
+  position: absolute; /* Position the divider absolutely */
+  right: 0; /* Align the divider to the right */
+  top: 50%; /* Vertically center the divider */
+  transform: translateY(-50%); /* Center the divider vertically */
+}
+
+/* Navbar Links on Hover */
+.navbar-nav .nav-link:hover {
+  background-color: #ffffff; /* Slightly lighter background on hover */
+  border-radius: 4px; /* Rounded corners for hover effect */
+}
+
+/* Responsive Navbar Styling */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Ensure the collapsed menu has the same background color */
+  }
+
+  .navbar-nav .nav-link {
+    color: #000000 !important; /* White color for links in collapsed menu */
+  }
+
+  .navbar-nav.categories {
+    flex-direction: column; /* Stack items vertically in collapsed view */
+  }
+
+  .navbar-nav .nav-item::after {
+    display: none; /* Hide dividers in collapsed view */
+  }
+  img {
+    height: 30px; /* Set height of the logo to a smaller size */
+    margin-right: 0.5rem; /* Space between image and text */
+  }
+  .btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
